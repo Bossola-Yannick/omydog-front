@@ -1,0 +1,151 @@
+@use '../../styles/variables' as v;
+
+.search {
+  width: 100%;
+  margin: 2rem 0;
+  &-img {
+    display: flex;
+    &-solo {
+      max-width: 34%;
+      overflow: hidden;
+    }
+  }
+  &-form {
+    width: 100%;
+    text-align: center;
+    &-departments,
+    &-animals {
+      padding-bottom: 1rem;
+    }
+    &-field {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &-select {
+        width: 50%;
+        padding-top: 1.5rem;
+      }
+    }
+    &-calendar {
+      width: 50%;
+    }
+    &-input {
+      width: 60%;
+      margin: 0.3rem;
+      border: 1px solid v.$color-primary;
+      border-radius: 0.5rem;
+      color: v.$color-bg;
+      background-color: v.$color-primary;
+      padding: 0.3rem;
+    }
+    &-button {
+      width: 8rem;
+      height: 8rem;
+      background-color: v.$color-primary;
+      border-radius: 8rem;
+      border: 1px solid rgb(62, 127, 224);
+      cursor: pointer;
+      padding: 0 1rem;
+      color: v.$color-bg;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 0.2rem;
+      &:hover {
+        background-color: v.$color-button;
+      }
+    }
+  }
+}
+
+.search-container {
+  width: 80%;
+  margin: 0 auto;
+  & h3 {
+    margin: 2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  &-result-card {
+    height: 12rem;
+    display: flex;
+    margin: 1rem 0;
+    border: 2px solid v.$color-primary;
+    border-radius: 1rem;
+    &-img {
+      width: 35%;
+      & img {
+        border-radius: 0.9rem 0 0 0.9rem;
+        max-height: 100%;
+        max-width: 100%;
+        border: 2px solid v.$color-primary;
+      }
+    }
+    &-button {
+      text-decoration: none;
+      position: absolute;
+      bottom: 0.5rem;
+      right: 1rem;
+      background-color: v.$color-primary;
+      color: v.$color-bg;
+      border-radius: 1rem;
+      border-color: v.$color-button;
+      padding: 0.3rem;
+      &:hover {
+        background-color: v.$color-button;
+      }
+    }
+    &-text {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-text h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.3rem;
+    }
+    &-text h6 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem;
+    }
+    &-description {
+      max-height: 4rem;
+      overflow: scroll;
+      & p {
+        padding: 0.3rem;
+      }
+    }
+    &-date span {
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+  }
+}
+.department-select {
+  padding: 0.5rem;
+  background-color: v.$color-primary;
+  color: v.$color-bg;
+  border: 2px solid v.$color-button;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+.react-calendar {
+  border: 1px solid v.$color-primary;
+  border-radius: 0 0 2rem 2rem;
+  width: 60%;
+  margin: 0 auto;
+  &__tile--now {
+    background: #f12828;
+  }
+  &__navigation {
+    background-color: v.$color-primary;
+    &__label,
+    &__arrow {
+      color: v.$color-bg;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '../../styles/variables';
+
+.container {
+  &-connexion {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    & h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 70%;
+      margin: 0 auto;
+      &-button {
+        background-color: $color-primary;
+        color: $color-bg;
+        border-radius: 1rem;
+        border-color: $color-button;
+        padding: 0.5rem;
+      }
+      &-input {
+        padding: 0.5rem;
+        border-radius: 1rem;
+        border-color: $color-primary;
+        &.error-border {
+          border: 2px solid red;
+        }
+      }
+    }
+  }
+  &-switch {
+    margin: 2rem;
+    &-text {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    &-button {
+      background-color: $color-primary;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      color: $color-bg;
+      font-size: 1.5rem;
+      border: 2px solid;
+      border-color: $color-button;
+    }
+  }
+}
+
+@media (max-width: 463px) {
+  .container {
+    &-connexion {
+      width: 100%;
+      padding: 0;
+      & h2 {
+        font-size: 2rem;
+      }
+      &-form {
+        width: 100%;
+        &-input {
+          margin: 0 auto;
+          width: 85%;
+        }
+        &-button {
+          width: 60%;
+          margin: 2rem auto;
+        }
+      }
+    }
+    &-switch {
+      padding: 0;
+      margin: 0.5rem 0;
+      width: 100%;
+      height: 8rem;
+      &-text {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 464px) and (max-width: 959px) {
+  .container {
+    &-connexion {
+      width: 100%;
+      padding: 0;
+      & h2 {
+        font-size: 2.5rem;
+      }
+      &-form {
+        width: 100%;
+        &-input {
+          margin: 0 auto;
+          width: 70%;
+        }
+        &-button {
+          width: 60%;
+          margin: 2rem auto;
+        }
+      }
+    }
+    &-switch {
+      padding: 0;
+      margin: 0.5rem 0;
+      width: 100%;
+      height: 8rem;
+      &-text {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

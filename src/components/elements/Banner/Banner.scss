@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as v;
+
+.search-banner {
+  width: 100%;
+  &-img {
+    display: flex;
+    &-solo {
+      max-width: 34%;
+      overflow: hidden;
+    }
+  }
+  &-form {
+    &-input {
+      margin: 0.3rem;
+      border: 1px solid v.$color-primary;
+      border-radius: 0.5rem;
+      color: v.$color-bg;
+      background-color: v.$color-primary;
+    }
+    &-button {
+      background-color: v.$color-primary;
+      border-radius: 1rem;
+      border: 1px solid rgb(62, 127, 224);
+      cursor: pointer;
+      padding: 0 1rem;
+      color: v.$color-bg;
+      font-weight: bold;
+    }
+  }
+}
+
+// Media query for smartphones below 768px
+@media (max-width: 767px) {
+  .search-banner {
+    &-img img:nth-last-child(-n+3) {
+      display:none;
+    }
+  }
+}
+// Media query for tabletd between 768px & 959px
+@media (min-width: 768px) and (max-width: 959px) {
+  .search-banner {
+    &-img img:nth-last-child(-n+2) {
+      display:none;
+    }
+  }
+}
